@@ -18,6 +18,9 @@ class Certificate extends Base {
     /** @var \DateTime */
     public $dateExpired;
 
+    /** @var \DateTime */
+    public $dateSubscriptionExpired;
+
     /** @var string */
     public $company;
 
@@ -40,6 +43,7 @@ class Certificate extends Base {
             if(isset($data->subjectAlternativeNames)) $this->subjectAlternativeNames = $data->subjectAlternativeNames;
             if(isset($data->dateIssued)) $this->dateIssued = new \DateTime($data->dateIssued);
             if(isset($data->dateExpired)) $this->dateExpired = new \DateTime($data->dateExpired);
+            if(isset($data->dateSubscriptionExpired)) $this->dateSubscriptionExpired = new \DateTime($data->dateSubscriptionExpired);
             if(isset($data->company)) $this->company = $data->company;
             if(isset($data->customerId)) $this->customerId = $data->customerId;
 
